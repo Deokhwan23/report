@@ -97,3 +97,71 @@ ps [옵션]
 - --user: 유효 사용자 이름이나 ID를 지정한다.
 - -123: --sid 123과 같은 의미이다.
 - 123: --pid 123과 같은 의미이다.
+
+> 출력 결과 필드를 제어하는 옵션
+- -0: PID, TTY, STAT, TIME, COMMAND 등의 필드 목록을 출력한다
+- -c: PID, CLS, PRI, TTY, TIME, CMD 등의 필드 목록을 출력한다.
+- -f: UID, PID, PPID, C, STIME, TTY, TIME, CMD 등의 필드를 CMD 필드의 전체 명령어 형태로 출력한다.
+- -j: PID, PGID, SID, TTY, TIME, CMD 등의 필드 목록을 출력한다.
+- -l: F, S, UID, PID, PPID, C, PRI, NI, ADDR, SZ, WCHAN, TTY, TIME, CMD 필드의 상세 정보를 출력한다.
+- -o : 사용자가 정의한 포맷을 지정한다.
+- -y : -l 이나 l 옵션과 함께 ADDR 필드를 RSS 필드로 출력한다.
+- 0 : PID, TTY, STAT, IME COMMAND 필드 정보를 출력한다.
+- X : PID, STACKP, ESP, EIP, TMOUT, ALARM, STAT, TTY, TIME, COMMAND 필드의 정보를 리눅스 i386 레지스터 형식으로 출력한다.
+- j : PPID, PID, PGID, SID, TTY, TPGID, STAT, UID, TIME, COMMAND 필드의 정보를 작업 제어에 관련된 형식으로 출력한다.
+- l : F, S, UID, PID, PPID, C, PRI, NI, ADDR, SZ, PSS, WCHAN, TTY, TIME, CMD 필드의 정보를 출력하고 -l 옵션과 함께 PSS 필드를 추가하여 출력한다.
+- o : 사용자 지정 형식으로 출력한다.
+- s : UID, PID, PENDING, BLOCKED, IGNORED, CAUGHT, STAT, TTY, TIME, COMMAND 필드의 정보를 출력한다.
+- u : USER, PID, %CPU, %MEM, VSZ, RSS, TTY, STAT, START, TIME, COMMAND 필드의 정보를 .
+- v : PID, TTY, STAT, TIME, MAJFL, TRS, DRS, RSS, %MEM, COMMAND 필드의 정보를 출력한다.
+- --format : 사용자 지정 형식으로 출력한다.
+
+> 출력 필드의 내용을 변경하는 옵션
+- -H : 프로세스를 계층형으로 출력한다.
+- -m : 스레드 정보를 출력한다.
+- -n namelist : 시스템 이름 리스트 파일(namelist)을 지정한다.
+- -w : 너비에 맞게 잘려진 내용을 제한이 없는 너비의 내용으로 상세하게 출력한다.
+- --cols : 스크린의 너비를 설정한다.
+- --columns : 스크린의 너비를 설정한다.
+- --cumulative : 죽은 자식 프로세스 데이터를 포함하여 출력한다.
+- --forest : 아스키 문자의 프로세스 트리 형태로 출력한다.
+- --html : HTML 이스케이프로 출력한다.
+- --headers : 헤더 라인을 반복한다.
+- --no-headers : 헤더를 보이지 않는다.
+- --lines : 스크린의 높이를 설정한다.
+- --rows : 스크린의 높이를 설정한다
+- --sort : 정렬 방식을 지정한다.
+- C : CPU 시간을 이용한다.
+- N : 지정한 시스템 이름의 리스트 파일을 사용한다.
+- O : 정렬 순서 지정하기 위한 옵션이다.
+- S : 죽은 자식 프로세스의 데이터를 포함한다.
+- c : 시스템 내부에 보관 중인 명령어 이름을 출력한다.
+- e : 명령어에 대한 매개 변수와 함께 환경 변수를 출력한다.
+- f : 아스키(*) 아트로 프로세스 트리를 출력한다.
+- h : 헤더 라인은 출력하지 않는다.
+- m : 모든 스레드 정보를 출력한다.
+- n : WCHAN과 USER 필드를 숫자 값으로 출력한다.
+- w : 필드의 너비에 맞게 잘려진 내용을 너비보다 상세하게 출력한다.
+- --cols : 스크린의 너비를 설정한다.
+- --columns : 스크린의 너비를 설정한다.
+- --cumulative : 죽은 자식 프로세스 데이터를 포함한다.
+- --forest : 아스키 아트의 프로세스 트리를 출력한다.
+- --html : HTML 이스케이프를 출력한다.
+- --headers : 헤더 라인을 반복한다.
+- --no-headers : 헤더를 출력하지 않는다.
+- --lines : 스크린의 높이를 설정한다.
+- --rows : 스크린의 높이를 설정한다.
+- --sort : 지정한 정렬 방식으로 출력한다.
+
+> 프로그램의 정보
+- -V : 버전 정보를 출력한다.
+- L : 모든 형태의 지시자를 출력한다.
+- V : 버전 정보를 출력한다.
+- --help : 사용법을 출력한다.
+- --info : 디버깅 정보를 출력한다.
+- --version : 버전 정보를 출력한다.
+
+> ps명령어를 실행한 사진
+- ps명령어는 프로세스의 현재 상태를 출력한다.
+<img width="369" alt="ps" src="https://github.com/deokhwan12/report/assets/133830093/9886ec18-cb39-4642-a91b-84e669eb44cc">
+
