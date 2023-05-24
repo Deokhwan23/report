@@ -104,64 +104,135 @@ ps [옵션]
 - -f: UID, PID, PPID, C, STIME, TTY, TIME, CMD 등의 필드를 CMD 필드의 전체 명령어 형태로 출력한다.
 - -j: PID, PGID, SID, TTY, TIME, CMD 등의 필드 목록을 출력한다.
 - -l: F, S, UID, PID, PPID, C, PRI, NI, ADDR, SZ, WCHAN, TTY, TIME, CMD 필드의 상세 정보를 출력한다.
-- -o : 사용자가 정의한 포맷을 지정한다.
-- -y : -l 이나 l 옵션과 함께 ADDR 필드를 RSS 필드로 출력한다.
-- 0 : PID, TTY, STAT, IME COMMAND 필드 정보를 출력한다.
-- X : PID, STACKP, ESP, EIP, TMOUT, ALARM, STAT, TTY, TIME, COMMAND 필드의 정보를 리눅스 i386 레지스터 형식으로 출력한다.
-- j : PPID, PID, PGID, SID, TTY, TPGID, STAT, UID, TIME, COMMAND 필드의 정보를 작업 제어에 관련된 형식으로 출력한다.
-- l : F, S, UID, PID, PPID, C, PRI, NI, ADDR, SZ, PSS, WCHAN, TTY, TIME, CMD 필드의 정보를 출력하고 -l 옵션과 함께 PSS 필드를 추가하여 출력한다.
-- o : 사용자 지정 형식으로 출력한다.
-- s : UID, PID, PENDING, BLOCKED, IGNORED, CAUGHT, STAT, TTY, TIME, COMMAND 필드의 정보를 출력한다.
-- u : USER, PID, %CPU, %MEM, VSZ, RSS, TTY, STAT, START, TIME, COMMAND 필드의 정보를 .
-- v : PID, TTY, STAT, TIME, MAJFL, TRS, DRS, RSS, %MEM, COMMAND 필드의 정보를 출력한다.
-- --format : 사용자 지정 형식으로 출력한다.
+- -o: 사용자가 정의한 포맷을 지정한다.
+- -y: -l 이나 l 옵션과 함께 ADDR 필드를 RSS 필드로 출력한다.
+- 0: PID, TTY, STAT, IME COMMAND 필드 정보를 출력한다.
+- X: PID, STACKP, ESP, EIP, TMOUT, ALARM, STAT, TTY, TIME, COMMAND 필드의 정보를 리눅스 i386 레지스터 형식으로 출력한다.
+- j: PPID, PID, PGID, SID, TTY, TPGID, STAT, UID, TIME, COMMAND 필드의 정보를 작업 제어에 관련된 형식으로 출력한다.
+- l: F, S, UID, PID, PPID, C, PRI, NI, ADDR, SZ, PSS, WCHAN, TTY, TIME, CMD 필드의 정보를 출력하고 -l 옵션과 함께 PSS 필드를 추가하여 출력한다.
+- o: 사용자 지정 형식으로 출력한다.
+- s: UID, PID, PENDING, BLOCKED, IGNORED, CAUGHT, STAT, TTY, TIME, COMMAND 필드의 정보를 출력한다.
+- u: USER, PID, %CPU, %MEM, VSZ, RSS, TTY, STAT, START, TIME, COMMAND 필드의 정보를 .
+- v: PID, TTY, STAT, TIME, MAJFL, TRS, DRS, RSS, %MEM, COMMAND 필드의 정보를 출력한다.
+- --format: 사용자 지정 형식으로 출력한다.
 
 > 출력 필드의 내용을 변경하는 옵션
-- -H : 프로세스를 계층형으로 출력한다.
-- -m : 스레드 정보를 출력한다.
-- -n namelist : 시스템 이름 리스트 파일(namelist)을 지정한다.
-- -w : 너비에 맞게 잘려진 내용을 제한이 없는 너비의 내용으로 상세하게 출력한다.
-- --cols : 스크린의 너비를 설정한다.
-- --columns : 스크린의 너비를 설정한다.
-- --cumulative : 죽은 자식 프로세스 데이터를 포함하여 출력한다.
-- --forest : 아스키 문자의 프로세스 트리 형태로 출력한다.
-- --html : HTML 이스케이프로 출력한다.
-- --headers : 헤더 라인을 반복한다.
-- --no-headers : 헤더를 보이지 않는다.
-- --lines : 스크린의 높이를 설정한다.
-- --rows : 스크린의 높이를 설정한다
-- --sort : 정렬 방식을 지정한다.
-- C : CPU 시간을 이용한다.
-- N : 지정한 시스템 이름의 리스트 파일을 사용한다.
-- O : 정렬 순서 지정하기 위한 옵션이다.
-- S : 죽은 자식 프로세스의 데이터를 포함한다.
-- c : 시스템 내부에 보관 중인 명령어 이름을 출력한다.
-- e : 명령어에 대한 매개 변수와 함께 환경 변수를 출력한다.
-- f : 아스키(*) 아트로 프로세스 트리를 출력한다.
-- h : 헤더 라인은 출력하지 않는다.
-- m : 모든 스레드 정보를 출력한다.
-- n : WCHAN과 USER 필드를 숫자 값으로 출력한다.
-- w : 필드의 너비에 맞게 잘려진 내용을 너비보다 상세하게 출력한다.
-- --cols : 스크린의 너비를 설정한다.
-- --columns : 스크린의 너비를 설정한다.
-- --cumulative : 죽은 자식 프로세스 데이터를 포함한다.
-- --forest : 아스키 아트의 프로세스 트리를 출력한다.
-- --html : HTML 이스케이프를 출력한다.
-- --headers : 헤더 라인을 반복한다.
-- --no-headers : 헤더를 출력하지 않는다.
-- --lines : 스크린의 높이를 설정한다.
-- --rows : 스크린의 높이를 설정한다.
-- --sort : 지정한 정렬 방식으로 출력한다.
+- -H: 프로세스를 계층형으로 출력한다.
+- -m: 스레드 정보를 출력한다.
+- -n namelist: 시스템 이름 리스트 파일(namelist)을 지정한다.
+- -w: 너비에 맞게 잘려진 내용을 제한이 없는 너비의 내용으로 상세하게 출력한다.
+- --cols: 스크린의 너비를 설정한다.
+- --columns: 스크린의 너비를 설정한다.
+- --cumulative: 죽은 자식 프로세스 데이터를 포함하여 출력한다.
+- --forest: 아스키 문자의 프로세스 트리 형태로 출력한다.
+- --html: HTML 이스케이프로 출력한다.
+- --headers: 헤더 라인을 반복한다.
+- --no-headers: 헤더를 보이지 않는다.
+- --lines: 스크린의 높이를 설정한다.
+- --rows: 스크린의 높이를 설정한다
+- --sort: 정렬 방식을 지정한다.
+- C: CPU 시간을 이용한다.
+- N: 지정한 시스템 이름의 리스트 파일을 사용한다.
+- O: 정렬 순서 지정하기 위한 옵션이다.
+- S: 죽은 자식 프로세스의 데이터를 포함한다.
+- c: 시스템 내부에 보관 중인 명령어 이름을 출력한다.
+- e: 명령어에 대한 매개 변수와 함께 환경 변수를 출력한다.
+- f: 아스키(*) 아트로 프로세스 트리를 출력한다.
+- h: 헤더 라인은 출력하지 않는다.
+- m: 모든 스레드 정보를 출력한다.
+- n: WCHAN과 USER 필드를 숫자 값으로 출력한다.
+- w: 필드의 너비에 맞게 잘려진 내용을 너비보다 상세하게 출력한다.
+- --cols: 스크린의 너비를 설정한다.
+- --columns: 스크린의 너비를 설정한다.
+- --cumulative: 죽은 자식 프로세스 데이터를 포함한다.
+- --forest: 아스키 아트의 프로세스 트리를 출력한다.
+- --html: HTML 이스케이프를 출력한다.
+- --headers: 헤더 라인을 반복한다.
+- --no-headers: 헤더를 출력하지 않는다.
+- --lines: 스크린의 높이를 설정한다.
+- --rows: 스크린의 높이를 설정한다.
+- --sort: 지정한 정렬 방식으로 출력한다.
 
 > 프로그램의 정보
-- -V : 버전 정보를 출력한다.
-- L : 모든 형태의 지시자를 출력한다.
-- V : 버전 정보를 출력한다.
-- --help : 사용법을 출력한다.
-- --info : 디버깅 정보를 출력한다.
-- --version : 버전 정보를 출력한다.
+- -V: 버전 정보를 출력한다.
+- L: 모든 형태의 지시자를 출력한다.
+- V: 버전 정보를 출력한다.
+- --help: 사용법을 출력한다.
+- --info: 디버깅 정보를 출력한다.
+- --version: 버전 정보를 출력한다.
 
 > ps명령어를 실행한 사진
 - ps명령어는 프로세스의 현재 상태를 출력한다.
 <img width="369" alt="ps" src="https://github.com/deokhwan12/report/assets/133830093/9886ec18-cb39-4642-a91b-84e669eb44cc">
 
+---
+**3. jobs 명령어**
++ jobs 명령어는 작업의 상태를 표시하는 명령어다.
+
+> 사용 구문
+```
+jobs [옵션]
+```
+```
+-l: 프로세스 그룹 ID를 state 필드 앞에 출력한다.
+-n: 프로세스 그룹 중에 대표 프로세스 ID를 출력한다.
+-p: 각 프로세스 ID에 대해 한 행씩 출력한다.
+command: 지정한 명령어를 실행한다.
+```
+
+> jobs 명령어를 실행한 사진
+- 현재 환경의 작업 상태를 아래와 같이 확인할 수 있다.
+<img width="365" alt="jobs1" src="https://github.com/deokhwan12/report/assets/133830093/e7938d72-099f-4080-a4ef-c25a0a823e25">
+
+- -l 옵션은 state 필드 앞에 프로세스 ID를 출력한다.
+<img width="356" alt="jobs2" src="https://github.com/deokhwan12/report/assets/133830093/222d928d-fa0b-48d3-b5fc-5675be9db4e7">
+
+- 다음과 같이 하면 v로 시작하는 모든 프로세스 ID를 확인할 수 있다.
+<img width="250" alt="jobs3" src="https://github.com/deokhwan12/report/assets/133830093/26efa63b-e10d-4933-9a2f-d4e5c6ffcc44">
+
+
+> jobs 명령어로 확인할 수 있는 세션의 상태값
+- Running: 작업이 일시 중단되지 않았고 종료하지 않고 계속 진행 중임을 뜻한다.
+- Done: 작업이 완료되어 0을 반환하고 종료했음을 뜻한다.
+- Done (code): 작업이 정상적으로 완료했으며, 0이 아닌 코드를 반환했음을 뜻한다.
+- Stopped: 작업이 일시 중단됨을 뜻한다.
+- Stopped (SIGTSTP): SIGTSTP 신호가 작업을 일시 중단했음을 뜻한다.
+- Stopped (SIGSTOP): SIGSTOP 신호가 일시 중단했음을 뜻한다.
+- Stopped (SIGTTIN): SIGTTIN 신호가 작업을 일시 중단했음을 뜻한다.
+- Stopped (SIGTTOU): SIGTTOU 신호가 작업을 일시 중단했음을 뜻한다.
+
+---
+**4. kill 명령어**
++ kill 명령어는 프로세스에 종료 시그널을 보낸다.
++ 시스템에 얘기치 않은 문젝 생긴 프로세스를 종료시킬 수 있다.
+
+> 사용 구문
+```
+kill [옵션] [PID]
+```
+```
+kill [-s시그널][-a]pid...
+kill -l [시그널]
+
+pid ···: 종료시킬 프로세스 ID나 프로세스 이름을 지정한다.
+-s: 전달할 시그널의 종류를 지정한다. 여기에는 시그널 이름이나 번호를 써준다.
+-l: 시그널로 사용할 수 있는 시그널 이름들을 보여준다.
+1(HUP): -HUP 프로세스를 재활성화한다.
+9(KILL): 프로세스를 강제로 종료시킨다.
+15(TERM): 프로세스를 정상적으로 정지합니다.
+```
+> 사용 예시
+- pid가 '12345'인 프로세스를 종료
+```
+kill 12345
+```
+- pid가 '12345'인 프로세스를 강제 종료
+```
+kill -9 12345
+또는
+kill -SIGKILL 12345
+```
+- kill 명령어에서 지원하는 시그널(Signal) 목록을 출력
+```
+kill -l
+```
